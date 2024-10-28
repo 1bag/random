@@ -1,0 +1,23 @@
+.mockup-window.svelte-1rw2bd3 {
+    position: relative;
+    overflow: hidden;
+    overflow-x: auto;
+    background-color: #15191e;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--rounded-box, 1rem);
+    padding-top: 1.25rem
+}
+
+.mockup-window.svelte-1rw2bd3:before {
+    content: "";
+    margin-bottom: 1rem;
+    display: block;
+    aspect-ratio: 1 / 1;
+    height: .75rem;
+    flex-shrink: 0;
+    align-self: flex-start;
+    border-radius: 9999px;
+    opacity: .3;
+    box-shadow: 1.4em 0, 2.8em 0, 4.2em 0
+}

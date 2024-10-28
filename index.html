@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en" class="bg-black">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Wanted.lol - A streamlined biolink experience</title>
+    <link rel="icon" href="./logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./_app/immutable/assets/0.9dc3c44b.css" rel="stylesheet">
+    <link href="./_app/immutable/assets/Stats.ec555737.css" rel="stylesheet">
+</head>
+
+<body data-sveltekit-preload-data="hover" class="relative text-sm sm:text-base flex flex-col min-h-screen ">
+    <div style="display: contents">
+        <div class="inset-0 opacity-5 absolute z-[0] bgGrid"></div>
+        <main class="flex flex-col bg-black text-white-500">
+            <header class="z-[50] fixed top-0 w-full border-b border-white/5 bg-black/5 py-4 backdrop-blur-md">
+                <div class="px-4 md:px-6 max-w-9xl mx-auto w-full">
+                    <div
+                        class="max-w-[85rem] flex flex-wrap basis-full items-center w-full mx-auto px-4 sm:px-6 lg:px-8 justify-between">
+                        <div class="w-1/2 lg:w-1/4 flex items-center justify-between">
+                            <a href="/">
+                                <img class="h-8" src="/logo.svg" alt="Logo">
+                            </a>
+                        </div>
+                        <button class="lg:hidden">
+                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                        <ul class="lg:flex hidden justify-end items-center flex-1">
+                            <li>
+                                <a class="text-white text-sm hover:text-opacity-75" href="/login">Login</a>
+                            </li>
+                            <li class="ml-[1.5rem]">
+                                <a class="items-center justify-between inline-flex font-medium text-sm px-6 py-2.5 text-center text-white duration-200 bg-white/5 border border-white/5 rounded-xl h-14 hover:bg-white/10 hover:border-white/10 focus:outline-none focus-visible:outline-black text-base focus-visible:ring-black"
+                                    href="/register">Sign up </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <section id="hero" class="flex flex-col px-0 xl:px-4 overflow-hidden">
+                <div class="flex flex-col flex-1 max-w-[1440px] mx-auto w-full">
+                    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-[7.5rem] md:pt-20 md:pb-24 relative">
+                        <div class="grid">
+                            <div class="relative block z-[10]">
+                                <div class="absolute top-0 left-[-75px] w-[17px] zoominout">
+                                    <img src="/one-star.png" alt="">
+                                </div>
+                                <div class="absolute top-0 right-[-75px] w-[17px] zoominout">
+                                    <img src="/one-star.png" alt="">
+                                </div>
+                                <div class="absolute top-[300px] right-[350px] w-[17px] zoominout">
+                                    <img src="/one-star.png" alt="">
+                                </div>
+                                <div class="absolute top-[400px] left-[350px] w-[17px] zoominout">
+                                    <img src="/one-star.png" alt="">
+                                </div>
+                                <div class="absolute top-[400px] left-[-30px] w-[17px] zoominout">
+                                    <img src="/one-star.png" alt="">
+                                </div>
+                                <div class="absolute top-[400px] right-[-25px] w-[17px] zoominout">
+                                    <img src="/one-star.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-background"></div>
+                        <div class="grid lg:grid-cols-2 gap-8 relative z-20 overflow-hidden">
+                            <div class="flex flex-col justify-center items-start xl:pe-10">
+                                <h1 class="text-white mb-6 text-3xl font-extrabold sm:text-7xl xl:text-heading-1">A
+                                    streamlined biolink experience </h1>
+                                <p class="max-w-[500px] mb-9 font-medium text-neutral-400 md:text-lg">Streamline your
+                                    online presence by linking all your preferred social media platforms to a single
+                                    URL. Our platform provides the best experience for your audience to find you online.
+                                </p>
+                                <a class="items-center justify-between inline-flex font-medium px-6 py-2.5 text-center text-white duration-200 bg-white/5 border border-white/5 rounded-xl h-14 hover:bg-white/10 hover:border-white/10 focus:outline-none focus-visible:outline-black text-base focus-visible:ring-black"
+                                    href="/register">
+                                    Get Started <span data-svelte-h="svelte-1xb5tc">→</span>
+                                </a>
+                            </div>
+                            <div class="w-full h-[20rem] sm:h-[30rem] lg:h-[35rem] flex items-end">
+                                <div class="mockup-window bg-base-300 z-20 svelte-1rw2bd3">
+                                    <div class="flex justify-center bg-base-200">
+                                        <img src="/lunacy.png" class="max-w-full max-h-full" alt="mockup">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-12 md:pt-20 md:pb-24 w-full flex justify-end gap-8 absolute z-10 overflow-hidden">
+                        <div class="flex">
+                            <div class="grid grid-cols-2 gap-12 w-[60rem] sm:w-[80rem] lg:w-[50rem] h-[55rem] md:h-[90rem] lg:h-[75rem] origin-[50%_0%] flex"
+                                style="transform: translate3d(7%, -2%, 0px) scale3d(0.9, 0.8, 1) rotateX(15deg) rotateY(-9deg) rotateZ(32deg);">
+                                <div class="grid col-start-2 gap-9 w-full h-[440px] animation-sliding-img-up-1">
+                                    <div
+                                        class="drop-shadow-2xl max-w-[800px] w-full p-4 rounded-3xl mx-auto backdrop-blur-sm border border-white/5 bg-gray-950/10 ">
+                                        <div class="flex flex-col items-center space-y-2">
+                                            <img src="/lunacy.jpg"
+                                                class="rounded-full w-32 h-32 object-cover drop-shadow-2xl"
+                                                alt="avatar">
+                                            <div class="flex flex-col items-center">
+                                                <button data-state="closed">
+                                                    <span
+                                                        class="text-2xl font-semibold text-center svelte-14wm1pi text-white">lunacy
+                                                    </span>
+                                                </button>
+                                                <span class="font-medium text-center text-gray-500">Owner @ Wanted.lol
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="drop-shadow-2xl max-w-[800px] w-full p-4 rounded-3xl mx-auto backdrop-blur-sm border border-white/5 bg-gray-950/10 ">
+                                        <div class="flex flex-col items-center space-y-2">
+                                            <img src="/zb.png"
+                                                class="rounded-full w-32 h-32 object-cover drop-shadow-2xl"
+                                                alt="avatar">
+                                            <div class="flex flex-col items-center">
+                                                <button data-state="closed">
+                                                    <span
+                                                        class="text-2xl font-semibold text-center svelte-14wm1pi text-white">zb
+                                                    </span>
+                                                </button>
+                                                <span class="font-medium text-center text-gray-500"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="drop-shadow-2xl max-w-[800px] w-full p-4 rounded-3xl mx-auto backdrop-blur-sm border border-white/5 bg-gray-950/10 ">
+                                        <div class="flex flex-col items-center space-y-2">
+                                            <img src="/karti.jpg"
+                                                class="rounded-full w-32 h-32 object-cover drop-shadow-2xl"
+                                                alt="avatar">
+                                            <div class="flex flex-col items-center">
+                                                <button data-state="closed">
+                                                    <span
+                                                        class="text-2xl font-semibold text-center svelte-14wm1pi text-white">Karti
+                                                    </span>
+                                                </button>
+                                                <span class="font-medium text-center text-gray-500">You &#39;re only in
+                                                    this world once, so make your life worth it. </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="drop-shadow-2xl max-w-[800px] w-full p-4 rounded-3xl mx-auto backdrop-blur-sm border border-white/5 bg-gray-950/10 ">
+                                        <div class="flex flex-col items-center space-y-2">
+                                            <img src="/gang.gif"
+                                                class="rounded-full w-32 h-32 object-cover drop-shadow-2xl"
+                                                alt="avatar">
+                                            <div class="flex flex-col items-center">
+                                                <button data-state="closed">
+                                                    <span
+                                                        class="text-2xl font-semibold text-center svelte-14wm1pi text-white">gang
+                                                    </span>
+                                                </button>
+                                                <span class="font-medium text-center text-gray-500">sticks and stones.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="drop-shadow-2xl max-w-[800px] w-full p-4 rounded-3xl mx-auto backdrop-blur-sm border border-white/5 bg-gray-950/10 ">
+                                        <div class="flex flex-col items-center space-y-2">
+                                            <img src="/gov.webp"
+                                                class="rounded-full w-32 h-32 object-cover drop-shadow-2xl"
+                                                alt="avatar">
+                                            <div class="flex flex-col items-center">
+                                                <button data-state="closed">
+                                                    <span
+                                                        class="text-2xl font-semibold text-center svelte-14wm1pi text-white">gov
+                                                    </span>
+                                                </button>
+                                                <span class="font-medium text-center text-gray-500"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="drop-shadow-2xl max-w-[800px] w-full p-4 rounded-3xl mx-auto backdrop-blur-sm border border-white/5 bg-gray-950/10 ">
+                                        <div class="flex flex-col items-center space-y-2">
+                                            <img src="/archilinux.png"
+                                                class="rounded-full w-32 h-32 object-cover drop-shadow-2xl"
+                                                alt="avatar">
+                                            <div class="flex flex-col items-center">
+                                                <button data-state="closed">
+                                                    <span
+                                                        class="text-2xl font-semibold text-center svelte-14wm1pi text-white">archilinux
+                                                    </span>
+                                                </button>
+                                                <span class="font-medium text-center text-gray-500">i use arch btw
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="stats" class="flex flex-col px-0 xl:px-4 overflow-hidden">
+                <div class="flex flex-col flex-1 max-w-[1440px] mx-auto w-full">
+                    <div
+                        class="max-w-[85rem] px-4 sm:px-6 lg:px-8 py-12 md:pt-20 md:pb-24 stats-bg z-30 flex flex-col justify-center items-center bg-[url('/hyperdrive.svg')] bg-no-repeat bg-center">
+                        <div class="max-w-2xl text-center">
+                            <h2 class="text-2xl font-bold md:text-5xl text-white">Join the thriving community at
+                                Wanted.lol </h2>
+                        </div>
+                        <div class="flex relative w-full h-[350px] statistics" style="perspective: 900px;">
+                            <div class="relative " style="transform-origin: left center; transform: rotateY(55deg);">
+                                <p class="text-left font-bold bg-clip-text flex items-center h-full text-[90px] sm:text-[250px] lg:text-[300px] xl:text-[400px]"
+                                    style="font-weight: 800; letter-spacing: -0.02em; background: linear-gradient(300deg, #6306aa9d 0.01%, #ba9cff 50.01%, #6306aa9d 100%)text; -webkit-text-fill-color: transparent;">
+                                    <span class="value">0</span>
+                                </p>
+                                <span
+                                    class="absolute inset-0 w-full h-full flex items-center justify-center text-white font-semibold text-2xl sm:text-5xl">Users
+                                    Created</span>
+                            </div>
+                            <div class="absolute right-0 h-[350px]"
+                                style="transform-origin: right center; transform: rotateY(-55deg);">
+                                <p class="text-left font-extrabold bg-clip-text h-full flex items-center text-[90px] sm:text-[250px] lg:text-[300px] xl:text-[400px] "
+                                    style="font-weight: 800; letter-spacing: -0.02em; background: linear-gradient(90deg, #6306aa9d 0.01%, #ba9cff 50.01%, #6306aa9d 100%) text; -webkit-text-fill-color: transparent;">
+                                    <span class="value">0</span>
+                                </p>
+                                <span
+                                    class="absolute inset-0 w-full h-full flex items-center justify-center font-semibold text-white text-2xl sm:text-5xl">Total
+                                    Views</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="features" class="flex flex-col px-0 xl:px-4 overflow-hidden">
+                <div class="flex flex-col flex-1 max-w-[1440px] mx-auto w-full">
+                    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="py-24 sm:py-32">
+                            <h2
+                                class="text-2xl text-center font-bold md:text-5xl text-gray-800 dark:text-neutral-200 text-white">
+                                All your links in one place </h2>
+                            <p class="text-center my-9 font-medium text-neutral-400 md:text-lg">With wanted.lol you can
+                                create a single link that points to all your social media while being stylish in the
+                                process.</p>
+                            <div class="grid grid-cols-1 gap-4 list-none mt-12 lg:gap-3 lg:grid-cols-3">
+                                <div class="overflow-hidden mt-12 h-[550px] rounded-3xl lg:mt-0 bg-gradientdown bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 ring-white/10 p-8 lg:p-20"
+                                    data-aos="zoom-out">
+                                    <h2 class="text-xl py-3 mt-6 tracking-tight font-medium text-white">Discord
+                                        Integrated </h2>
+                                    <p class="mt-4 text-sm text-zinc-400 text-pretty">With Discord integration,
+                                        wanted.lol allows you to seamlessly connect your discord account easily. </p>
+                                    <div class="mt-12 relative gap-5 flex flex-col">
+                                        <div
+                                            class="mr-auto flex flex-row space-x-4 p-4 rounded-3xl bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 ring-white/10">
+                                            <div>
+                                                <img src="/zbu.webp" alt="Avatar" class="rounded-full h-12 w-12">
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <div class="text-white font-semibold">zbu</div>
+                                                <div class="text-white">online</div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="opacity-75 ml-auto flex flex-row space-x-4 p-4 rounded-3xl bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 ring-white/10">
+                                            <div>
+                                                <img src="/obbn.webp" alt="Avatar" class="rounded-full h-12 w-12">
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <div class="text-white font-semibold">obbn</div>
+                                                <div class="text-white">offline</div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="opacity-50 mr-auto flex flex-row space-x-4 p-4 rounded-3xl bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 ring-white/10">
+                                            <div>
+                                                <img src="/onbot.webp" alt="Avatar" class="rounded-full h-12 w-12">
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <div class="text-white font-semibold">onbot</div>
+                                                <div class="text-white">offline</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden mt-12 h-[550px] rounded-3xl lg:mt-0 bg-gradientdown bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 ring-white/10 p-8 lg:p-20"
+                                    data-aos="zoom-out">
+                                    <h2 class="text-xl py-3 mt-6 tracking-tight font-medium text-white">Profile Music
+                                    </h2>
+                                    <p class="mt-4 text-sm text-zinc-400 text-pretty">Enhance your bio link page with
+                                        our Profile Music feature. Choose a song to reflect your style and make your
+                                        page stand out. Set the perfect tone for everyone who visits!</p>
+                                    <div class="mt-12 flex justify-center">
+                                        <div class="mockup-window border border-base-300 w-[95%] absolute bg-[#000]">
+                                            <div class="flex flex-col gap-5 justify-center px-4 py-16 bg-[#09090b]">
+                                                <div
+                                                    class="grid w-full max-w-full items-center space-y-3 rounded-3xl p-8 border border-white/5 bg-white/5 backdrop-blur-md">
+                                                    <label
+                                                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 flex items-center"
+                                                        for="avatar">Music
+                                                    </label>
+                                                    <div class="flex items-center justify-center space-x-3">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="fill-current w-[20px] h-[20px]" viewBox="0 0 24 24"
+                                                            id="music">
+                                                            <g>
+                                                                <g>
+                                                                    <rect width="24" height="24" opacity="0"></rect>
+                                                                    <path
+                                                                        d="M19 15V4a1 1 0 0 0-.38-.78 1 1 0 0 0-.84-.2l-9 2A1 1 0 0 0 8 6v8.34a3.49 3.49 0 1 0 2 3.18 4.36 4.36 0 0 0 0-.52V6.8l7-1.55v7.09a3.49 3.49 0 1 0 2 3.17 4.57 4.57 0 0 0 0-.51z">
+                                                                    </path>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                        <input
+                                                            class="flex h-10 w-full rounded-md border border-white/5 bg-white/5 px-3 py-2 text-sm ring-offset-background file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 file:rounded-full file:border-0 file:text-foreground"
+                                                            placeholder="Upload Music" type="file" name="music"
+                                                            id="music" accept="audio/mp3" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden mt-12 h-[550px] rounded-3xl lg:mt-0 bg-gradientdown bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 ring-white/10 p-8 lg:p-20"
+                                    data-aos="zoom-out">
+                                    <h2 class="text-xl py-3 mt-6 tracking-tight font-medium text-white">Customizable
+                                    </h2>
+                                    <p class="mt-4 text-sm text-zinc-400 text-pretty">Discover endless customization
+                                        options with our bio link website! Tailor your page to fit your unique style
+                                        with a variety of themes, fonts, and color schemes. Add your personal touch with
+                                        custom profile pictures, backgrounds and songs to create a standout online
+                                        presence that truly represents you. </p>
+                                    <div class="mt-12">
+                                        <img class="rounded-3xl absolute ring-1 ring-white/10" src="/dashboard.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden mt-12 h-[550px] rounded-3xl lg:mt-0 bg-gradientup bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 ring-white/10 p-8 lg:p-20 lg:col-span-1"
+                                    data-aos="zoom-out">
+                                    <h2 class="text-xl py-3 mt-6 tracking-tight font-medium text-white">Social
+                                        Connections </h2>
+                                    <p class="mt-4 text-sm text-zinc-400 text-pretty">Effortlessly link all your social
+                                        media profiles in one place, making it easier than ever for visitors to follow
+                                        you across platforms. Streamline your online presence and grow your network with
+                                        just a few clicks.
+                                    </p>
+                                    <div class="mt-12 flex justify-center">
+                                        <div class="mockup-phone">
+                                            <div class="camera"></div>
+                                            <div class="display flex justify-center">
+                                                <div
+                                                    class="artboard bg-[#09090b] artboard-demo phone-1 flex justify-start">
+                                                    <div
+                                                        class="relative rounded-3xl border border-base-200 bg-[#09090b] p-2 mt-12 ">
+                                                        <div class="relative">
+                                                            <div
+                                                                class="rounded-2xl border-2 border-white border-dashed bg-white/5 p-10 ">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="mx-auto h-8 w-auto fill-white dark:contrast-100 dark:grayscale dark:invert"
+                                                                    enable-background="new 0 0 20 20"
+                                                                    viewBox="0 0 20 20" id="link">
+                                                                    <path fill="#fff" d="M6.92,9.31c1.01-1.01,2.76-1.01,3.77,0c0.45,0.45,1.19,0.45,1.64,0c0.45-0.45,0.45-1.19,0-1.64
+                        c-0.94-0.94-2.19-1.46-3.52-1.46S6.22,6.73,5.28,7.67L1.96,11c-1.94,1.94-1.94,5.1,0,7.05c0.94,0.94,2.19,1.46,3.52,1.46
+                        S8.06,18.98,9,18.04l1.42-1.42c0.45-0.45,0.45-1.19,0-1.64c-0.45-0.45-1.19-0.45-1.64,0L7.36,16.4c-1.01,1.01-2.76,1.01-3.77,0
+                        c-1.04-1.04-1.04-2.73,0-3.77L6.92,9.31z"></path>
+                                                                    <path fill="#fff" d="M14.72,12.32L18.04,9c1.94-1.94,1.94-5.1,0-7.05c-1.94-1.94-5.1-1.94-7.05,0L9.58,3.37
+                        c-0.45,0.45-0.45,1.19,0,1.64c0.45,0.45,1.19,0.45,1.64,0l1.42-1.42c1.04-1.04,2.73-1.04,3.77,0c1.04,1.04,1.04,2.73,0,3.77
+                        l-3.32,3.32c-1.01,1.01-2.76,1.01-3.77,0c-0.45-0.45-1.19-0.45-1.64,0c-0.45,0.45-0.45,1.19,0,1.64c0.94,0.94,2.19,1.46,3.52,1.46
+                        S13.78,13.26,14.72,12.32z"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overflow-hidden mt-12 h-[550px] rounded-3xl lg:mt-0 bg-gradientup bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 ring-white/10 p-8 lg:p-20 lg:col-span-2"
+                                    data-aos="zoom-out">
+                                    <h2 class="text-xl py-3 mt-6 tracking-tight font-medium text-white">Analytics Page
+                                    </h2>
+                                    <p class="mt-4 text-sm text-zinc-400 text-pretty">Unlock valuable insights with our
+                                        Analytics feature! Track visits, clicks, and interactions on your bio link page
+                                        to understand your audience better. Use this data to optimize your content and
+                                        boost engagement, helping you make informed decisions to enhance your online
+                                        presence. </p>
+                                    <div class="mt-12">
+                                        <img class="rounded-3xl ring-1 ring-white/10" src="/analytics.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="mt-12 h-[550px] lg:h-full rounded-3xl lg:mt-0 bg-gradientdown bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 text-center ring-white/10 p-8 lg:p-20 lg:col-span-full"
+                                    data-aos="zoom-out">
+                                    <h2 class="text-3xl mt-6 tracking-tight font-light lg:text-4xl text-white">Premium
+                                        Plan </h2>
+                                    <p class="mt-4 text-sm text-zinc-300 max-w-xl mx-auto">Elevate your experience with
+                                        our Premium Plan! Unlock a suite of exclusive perks including advanced
+                                        customization options, priority support, and access to premium-only features.
+                                        Enhance your page &#39;s functionality and aesthetics, and enjoy detailed
+                                        analytics to fine-tune your audience engagement. Experience the best our
+                                        platform has to offer and make your bio link stand out! </p>
+                                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                                        <a href="/dashboard/premium" title="link to your page" aria-label="your label"
+                                            class="text-sm py-2 px-4 border focus:ring-2 rounded-full border-transparent bg-white hover:bg-white/10 text-black duration-200 focus:ring-offset-2 focus:ring-white hover:text-white inline-flex items-center justify-center ring-1 ring-transparent">Upgrade
+                                            Premium</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pricing" class="flex flex-col px-0 xl:px-4 overflow-hidden">
+                <div class="flex flex-col flex-1 max-w-[1440px] mx-auto w-full">
+                    <div
+                        class="relative flex flex-col items-center justify-center max-w-6xl px-8 py-12 mx-auto lg:py-24">
+                        <div
+                            class="absolute z-[-1] -inset-x-8 hidden scale-y-150 opacity-60 dark:block sm:scale-y-100 lg:-top-56">
+                            <svg class="w-full blur-3xl contrast-150" viewBox="0 0 1440 1024" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_103_49)">
+                                    <path data-color="purple"
+                                        class="fill-[#19004E] transition duration-500 data-[color=blue]:fill-blue-950 data-[color=cyan]:fill-cyan-950 data-[color=indigo]:fill-indigo-950 data-[color=lime]:fill-lime-950 data-[color=orange]:fill-orange-950/40 data-[color=pink]:fill-pink-950/40 data-[color=purple]:fill-purple-950/40 data-[color=red]:fill-red-950/40"
+                                        d="M795.5 572C1247.1 572 1365 190.667 1367.5 0H1552V1021H50V806C110.333 728 343.9 572 795.5 572Z"
+                                        fill="currentColor"></path>
+                                    <path data-color="purple"
+                                        class="fill-[#19004E] transition duration-500 data-[color=blue]:fill-blue-950 data-[color=cyan]:fill-cyan-950 data-[color=indigo]:fill-indigo-950 data-[color=lime]:fill-lime-600/5 data-[color=orange]:fill-orange-950/40 data-[color=pink]:fill-pink-950/40 data-[color=purple]:fill-purple-950/40 data-[color=red]:fill-red-950/40"
+                                        d="M-73.1784 0L-563 316L-73.1784 632L418 316L-73.1784 0Z" fill="currentColor">
+                                    </path>
+                                    <path data-color="purple"
+                                        class="opacity-60 transition duration-500 data-[color=blue]:fill-blue-500 data-[color=cyan]:fill-cyan-500 data-[color=indigo]:fill-[#916AFF] data-[color=lime]:fill-lime-500 data-[color=orange]:fill-orange-500 data-[color=pink]:fill-pink-500 data-[color=purple]:fill-purple-500 data-[color=red]:fill-red-500"
+                                        d="M1099.5 477C1235.9 453.8 1363.33 327.333 1410 267C1367.17 351 1257.8 530.1 1163 574.5C1068.2 618.9 750.167 623.667 603 620.5C711.667 582.333 963.1 500.2 1099.5 477Z"
+                                        fill="currentColor"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_103_49">
+                                        <rect width="1440" height="1024" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="mt-8 text-2xl text-center font-semibold tracking-tight text-white lg:text-5xl">
+                                Choose your plan </p>
+                            <p class="max-w-xl mt-4 text-lg text-gray-400 text-center">Unlimited access to all of our
+                                features </p>
+                        </div>
+                        <div class="grid grid-cols-1 gap-8 mt-12 lg:ap-2 lg:grid-cols-2">
+                            <div class="lg:order-last" data-aos="fade-up" data-aos-delay="200">
+                                <div class="flex flex-col ">
+                                    <div
+                                        class="p-8 shadow-2xl rounded-3xl bg-black/50 backdrop-blur-3xl shadow-gray-900 ring-1 ring-white/10 overflow-hidden">
+                                        <div class="absolute -z-10 pointer-events-none inset-0 overflow-hidden -mx-28">
+                                            <span class="absolute left-0 top-0">
+                                                <img src="/shape-02.svg" alt="shape">
+                                            </span>
+                                            <span class="absolute left-1/2 -translate-x-1/2 bottom-0">
+                                                <img src="/blur-03.svg" alt="blur" class="max-w-none">
+                                            </span>
+                                            <span class="absolute left-1/2 -translate-x-1/2 bottom-0">
+                                                <img src="/blur-04.svg" alt="blur" class="max-w-none">
+                                            </span>
+                                            <span class="absolute left-1/2 -translate-x-1/2 bottom-0">
+                                                <img src="/blur-05.svg" alt="blur" class="max-w-none">
+                                            </span>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap-3">
+                                                <svg class="w-8 h-8 text-black rounded-full"
+                                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" id="Diamond">
+                                                    <path
+                                                        d="M21,12.33s0,0,0,0a.31.31,0,0,0-.1-.15l-.05-.05L17.85,9.15A.47.47,0,0,0,17.5,9H7.5a.47.47,0,0,0-.35.15L4.2,12.1l0,.05a.31.31,0,0,0-.1.15s0,0,0,0a.09.09,0,0,0,0,.07.28.28,0,0,0,0,.09.4.4,0,0,0,.06.22.37.37,0,0,0,.07.12l0,0,7.92,8.91a.6.6,0,0,0,.25.2h0l.12,0h0a.54.54,0,0,0,.22-.05.44.44,0,0,0,.15-.12l0,0,8-8.94,0,0,.08-.12a.51.51,0,0,0,.05-.22.28.28,0,0,0,0-.09A.09.09,0,0,0,21,12.33ZM12.53,20l-2.3-6h4.55ZM10.77,10h3.46l.65,3H10.12ZM7.71,10h2l-.64,2.91-3.59-.72ZM5.87,13.28l3.25.65,2.05,5.32ZM22,6.53a.5.5,0,0,1-.48.5c-.16,0-1.53.1-1.61,1.34a.92.92,0,0,1,0,.23.5.5,0,0,1-.49.4h-.1a.5.5,0,0,1-.39-.58.28.28,0,0,1,0-.13A1.27,1.27,0,0,0,17.47,7,.5.5,0,0,1,17,6.46.48.48,0,0,1,17.49,6a2.27,2.27,0,0,1,2,1,2.22,2.22,0,0,1,.46-.41,2.78,2.78,0,0,1-1-2.06.5.5,0,1,1,1,0A1.64,1.64,0,0,0,21.52,6,.5.5,0,0,1,22,6.53ZM5.47,5A3.06,3.06,0,0,1,3.55,6,.5.5,0,0,1,3,5.55.5.5,0,0,1,3.44,5C3.6,5,5,4.78,5,3.49H5A.51.51,0,0,1,5.52,3,.5.5,0,0,1,6,3.51H6A1.4,1.4,0,0,0,7.51,5,.5.5,0,0,1,8,5.48.5.5,0,0,1,7.55,6C7.39,6,6,6.19,6,7.46A.5.5,0,0,1,5.53,8h0A.51.51,0,0,1,5,7.48,2.18,2.18,0,0,1,6,5.54a1.32,1.32,0,0,1-.28-.25A1.49,1.49,0,0,1,5.47,5Z"
+                                                        fill="#ffffff" class="color000000 svgShape"></path>
+                                                </svg>
+                                                <p class="text-base font-medium text-white uppercase">Premium Plan </p>
+                                            </div>
+                                            <p>
+                                                <span class="text-4xl font-bold text-white uppercase">$5</span>
+                                                <span class="text-base font-medium text-white">/lifetime</span>
+                                            </p>
+                                        </div>
+                                        <p class="mt-8 text-sm font-medium text-white">Unlock full customization and
+                                            exclusive features for the ultimate experience. </p>
+                                        <div>
+                                            <div>
+                                                <p class="mt-4 text-lg font-medium text-white uppercase lg:mt-8">
+                                                    Features </p>
+                                                <ul class="gap-4 mt-4 space-y-3 text-white list-none" role="list">
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Page Alias</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Custom Fonts</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Exclusive Discord Role and Perks</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Custom Text Colors</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Title Effects</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Background Effects</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Cursor Effects</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Priority Support</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="flex mt-6">
+                                            <a class="items-center justify-between inline-flex w-full font-medium px-6 py-2.5 text-center text-black duration-200 bg-white rounded-xl h-14 hover:bg-white/20 hover:border-white hover:text-white focus:outline-none focus-visible:outline-black text-base focus-visible:ring-black"
+                                                href="/dashboard/premium">
+                                                Upgrade Premium <span>→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:order-first" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flex flex-col ">
+                                    <div
+                                        class="p-8 rounded-3xl bg-black/20 backdrop-blur-3xl shadow-gray-900/5 ring-1 ring-white/10 shadow-2xl">
+                                        <div class="flex justify-between">
+                                            <div class="flex items-center gap-3">
+                                                <p class="text-base font-medium text-white uppercase">Basic Plan </p>
+                                            </div>
+                                            <p>
+                                                <span
+                                                    class="text-lg font-medium text-white uppercase lg:text-xl">FREE</span>
+                                            </p>
+                                        </div>
+                                        <p class="mt-8 text-sm font-medium text-gray-300">Start building your online
+                                            presence at no cost. </p>
+                                        <div>
+                                            <div>
+                                                <p class="mt-4 text-lg font-medium text-white uppercase lg:mt-8">
+                                                    Features </p>
+                                                <ul class="order-last gap-4 mt-4 space-y-3 text-gray-300 list-none"
+                                                    role="list">
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Music Intergrations</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Any Social Media/Website Links</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Discord Intergration</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Custom Page Titles</span>
+                                                    </li>
+                                                    <li class="flex items-center gap-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="lucide-icon lucide lucide-check-circle-2 ">
+                                                            <path
+                                                                d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z">
+                                                            </path>
+                                                            <path d="m9 12 2 2 4-4"></path>
+                                                        </svg>
+                                                        <span>Next Level Customisation</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="flex mt-6">
+                                            <a class="items-center justify-between inline-flex w-full font-medium px-6 py-2.5 text-center text-white duration-200 bg-white/5 border border-white/5 rounded-xl h-14 hover:bg-white/10 hover:border-white/10 focus:outline-none focus-visible:outline-black text-base focus-visible:ring-black"
+                                                href="/authorize/?target=register">
+                                                Get started <span>→</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="cta" class="flex flex-col px-0 xl:px-4 overflow-hidden">
+                <div class="flex flex-col flex-1 max-w-[1440px] mx-auto w-full">
+                    <div class="mx-auto max-w-7xl px-8 lg:px-32 md:px-12 py-12 lg:py-32">
+                        <div class="relative overflow-hidden mx-auto max-w-7xl px-6 lg:px-8">
+                            <div class="grid grid-cols-1 gap-6 p-8 overflow-hidden borderborder-white/5 bg-black/50 bg-gradientdown backdrop-blur-3xl shadow-gray-900 rounded-3xl ring-1 ring-white/10 shadow-2xl lg:grid-cols-2 lg:gap-24 lg:p-20 "
+                                data-aos="fade-down">
+                                <div class="relative items-center gap-12 m-auto lg:inline-flex">
+                                    <div class="text-center lg:text-left">
+                                        <p class="text-3xl lg:text-5xl font-extrabold tracking-tight text-white">Dive
+                                            into the Fun! </p>
+                                        <p class="mt-4 text-base text-vulcan-300">Unlock the Ultimate Community
+                                            Experience on Discord </p>
+                                        <div class="flex flex-col justify-center mt-12 sm:flex-row lg:justify-start">
+                                            <a href="https://discord.gg/wanted"
+                                                class="rounded-lg px-4 py-2 text-sm font-semibold transition-all flex items-center justify-center text-white bg-gradient-to-b from-white/[.105] to-white/[.15] hover:to-white/[.25] h-10 ring-1 ring-inset ring-white/20">Join
+                                                our Discord    → </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative order-first hidden w-full mt-0 lg:block z-[1]">
+                                    <img class="object-cover object-center top-[-50px] w-full mx-auto lg:absolute lg:ml-auto"
+                                        alt="hero" src="/discord.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer
+                class="overflow-hidden relative border-t bg-vulcan-900 border-white/5 bg-black/20 backdrop-blur-3xl shadow-gray-900/5">
+                <div class="relative px-8 py-12 mx-auto max-w-7xl md:px-12 lg:px-32 lg:py-24">
+                    <div class="xl:grid xl:grid-cols-4 xl:gap-8 space-y-12 lg:space-y-0">
+                        <div class="text-white">
+                            <div class="inline-flex items-center gap-3">
+                                <img class="h-8" src="/logo.svg" alt="Logo">
+                            </div>
+                            <p class="my-5 text-sm text-vulcan-300">
+                                <span class="mt-6 text-sm font-normal text-vulcan-300">
+                                    © 2024 Wanted.lol <br>All rights reserved
+                                </span>
+                            </p>
+                            <div class="flex flex-row gap-[1.2rem]">
+                                <a class="h-4 cursor-pointer align-middle text-xl hover:opacity-60"
+                                    href="https://www.instagram.com/wantedbio" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1em" height="1em"
+                                        viewBox="0 0 50 50">
+                                        <path fill="currentColor"
+                                            d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="h-4 cursor-pointer align-middle text-xl hover:opacity-60"
+                                    href="https://discord.gg/wanted" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a class="h-4 cursor-pointer align-middle text-xl hover:opacity-60"
+                                    href="https://www.tiktok.com/@wantedbiolink" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8 xl:col-span-3">
+                            <div class="md:grid md:grid-cols-2 md:gap-8">
+                                <div>
+                                    <ul role="list" class="mt-4 space-y-2">
+                                        <li>
+                                            <a href="/authorize?target=login" title="link to  page"
+                                                aria-label="your label"
+                                                class="inline-flex items-center text-sm text-vulcan-300 hover:text-white">Login
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/authorize?target=register" title="link to  page"
+                                                aria-label="your label"
+                                                class="inline-flex items-center text-sm text-vulcan-300 hover:text-white">Register
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script>
+            {
+                __sveltekit_ksy0c4 = {
+                    base: new URL(".", location).pathname.slice(0, -1),
+                    env: {
+                        "PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5dnRrbHRzZmpqa29scWxrZ21iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTE4MDA1MzcsImV4cCI6MjAyNzM3NjUzN30.JoVzLzKYVdGUIUgmZsCX_6F55ur9aP5C-xI2WhCw9uQ",
+                        "PUBLIC_SUPABASE_URL": "https://byvtkltsfjjkolqlkgmb.supabase.co"
+                    }
+                };
+
+                const element = document.currentScript.parentElement;
+
+                const data = [{
+                    "type": "data",
+                    "data": {
+                        session: void 0
+                    },
+                    "uses": {}
+                }, null];
+
+                Promise.all([import("./_app/immutable/entry/start.f539fbee.js"), import("./_app/immutable/entry/app.13b1f594.js")]).then(([kit, app]) => {
+                    kit.start(app, element, {
+                        node_ids: [0, 5],
+                        data,
+                        form: null,
+                        error: null
+                    });
+                }
+                );
+            }
+        </script>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000,
+            once: false,
+        });
+        AOS.refreshHard();
+    </script>
+</body>
+
+</html>
